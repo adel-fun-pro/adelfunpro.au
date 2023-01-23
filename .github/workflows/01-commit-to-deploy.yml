@@ -50,12 +50,16 @@ jobs:
 
           files="index.html index.css *.svg font"
           dir="$(mktemp -d)"
-          cp -r $files "$dir"
+          mv $files "$dir"
+
+          git reset --hard HEAD
+
           git checkout deploy
+
           mv "$dir"/* .
 
           git add -A
           git diff-index --quiet HEAD ||  git commit -am "deploy files"
-          git push origin deploy
+          git push -f origin deploy
 
           rmdir "$dir"
