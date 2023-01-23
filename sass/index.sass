@@ -1,0 +1,59 @@
+
+@use "navbar/navbar.sass"
+@use "container/container.sass"
+@use "blogs-and-events/blogs-and-events.sass"
+@use "about-our-club/about-our-club.sass"
+@use "signup/signup.sass"
+@use "footer/footer.sass"
+@use "info-box/info-box.sass"
+
+@import "mobile"
+
+@import "variables"
+
+body, html
+	margin: 0
+
+html
+	width: 100%
+	height: 100%
+
+body
+	background: url("/background.svg") no-repeat top
+	background-size: cover
+
+img
+	width: 100%
+
+ul, ol, li
+	margin: 0
+	padding: 0
+	list-style: none
+
+ul
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+
+h1, h2, h3, h4, h5
+	color: $black
+	margin: 0
+
+.h1-alt
+	font-size: 40px
+
+.h1-alt, h2-alt, .h3-alt
+	font-family: $source-code-variable
+	color: $black
+
+p
+	font-family: $source-code-variable
+	color: $black
+
+a
+	text-decoration: none
+	color: $pink
+	font-family: $montserrat-bold
+
+@import "button"
+@import "superfooter"

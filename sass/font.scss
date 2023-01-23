@@ -1,0 +1,45 @@
+
+@import "variables";
+
+@font-face {
+	font-family: "Montserrat";
+	src:
+		url("/font/Montserrat-Regular.woff2") format("woff2"),
+		url("/font/Montserrat-Regular.otf") format("otf");
+}
+
+@font-face {
+	font-family: "Montserrat Medium";
+	src:
+		url("/font/Montserrat-Medium.woff2") format("woff2"),
+		url("/font/Montserrat-Medium.otf") format("otf");
+}
+
+@font-face {
+	font-family: $montserrat-bold;
+	src:
+		url("/font/Montserrat-Bold.woff2") format("woff2"),
+		url("/font/Montserrat-Bold.otf") format("otf");
+}
+
+@font-face {
+	font-family: $source-code-pro-regular;
+	src:
+		url("/font/SourceCodePro-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: $source-code-pro-bold;
+	src:
+		url("/font/SourceCodePro-Bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: $source-code-variable;
+	src:
+		url("/font/SourceCodeVariable-Roman.woff2") format("woff2");
+}
+
+* {
+	font-family: "Montserrat", "monospace";
+}

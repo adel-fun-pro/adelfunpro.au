@@ -1,0 +1,14 @@
+**/*.woff2? filter=lfs diff=lfs merge=lfs -text
+font/Montserrat-Bold.otf filter=lfs diff=lfs merge=lfs -text
+font/Montserrat-Medium.otf filter=lfs diff=lfs merge=lfs -text
+font/Montserrat-Regular.otf filter=lfs diff=lfs merge=lfs -text
+font/Montserrat-SemiBold.otf filter=lfs diff=lfs merge=lfs -text
+font/Montserrat-Thin.otf filter=lfs diff=lfs merge=lfs -text
+font/SourceCodePro-Bold.woff2 filter=lfs diff=lfs merge=lfs -text
+font/SourceCodePro-Regular.woff2 filter=lfs diff=lfs merge=lfs -text
+font/SourceCodeVariable-Roman.woff2 filter=lfs diff=lfs merge=lfs -text
+font/Montserrat-Bold.woff2 filter=lfs diff=lfs merge=lfs -text
+font/Montserrat-Medium.woff2 filter=lfs diff=lfs merge=lfs -text
+font/Montserrat-Regular.woff2 filter=lfs diff=lfs merge=lfs -text
+font/Montserrat-SemiBold.woff2 filter=lfs diff=lfs merge=lfs -text
+font/Montserrat-Thin.woff2 filter=lfs diff=lfs merge=lfs -text

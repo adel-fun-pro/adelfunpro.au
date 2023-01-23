@@ -1,0 +1,62 @@
+---
+
+name: Build afafk/adelfunpro.au and push to deploy
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      -
+        name: Build and push to Docker Hub
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: afafk/adelfunpro.au:latest
+
+  build-and-push-to-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Use apt to get dependencies
+        run: sudo apt-get install -y make sass
+
+      -
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - run: git checkout HEAD
+
+      -
+        name: Build the sass dependencies
+        run: make build
+
+      -
+        name: Copy build files to another branch
+        run: |
+          git config --global user.name "Github Actions"
+          git config --global user.email "action@github.com"
+          git fetch
+
+          files="index.html index.css *.svg font"
+          dir="$(mktemp -d)"
+          cp -r $files "$dir"
+          git checkout deploy
+          mv "$dir"/* .
+
+          git add -A
+          git diff-index --quiet HEAD ||  git commit -am "deploy files"
+          git push origin deploy
+
+          rmdir "$dir"

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Adelaide Functional Programming</title>
+		<link href="/font.css" rel="stylesheet" />
+		<link href="/index.css" rel="stylesheet" />
+		<meta title="og:description" content="Adelaide Functional Programming is Adelaide's number one community for functional programming discussion and enthusiasm. We give talks, (mostly) organise social functions and sponsor job postings." />
+		<meta title="og:title" content="Adelaide Functional Programming" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<div class="container">
+			<section id="navbar">
+				<ul class="navbar">
+					<li class="navbar-img-logo">
+						<a href="/">
+							<img src="/logo-blue.svg" />
+						</a>
+					</li>
+					<li class="navbar-center">
+						<ul class="navbar">
+							<li class="navbar-blue">
+								<a href="#about-our-club">
+									About
+								</a>
+							</li>
+							<li>
+								<a href="https://www.meetup.com/en-AU/adelaide-functional-programming-meetup-group/">
+									Events
+								</a>
+							</li>
+							<li>
+								<a href="https://medium.com">
+									Blog
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a
+							href="https://adfp-slack-invite.herokuapp.com"
+							target="_blank"
+							class="button-join"
+						>
+							Join our Slack!
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<section id="info-box">
+				<div class="info-box">
+					<div class="info-box-logo-text">
+						<img src="/logo-text.svg" />
+					</div>
+				</div>
+			</section>
+
+			<section id="signup">
+				<div class="signup">
+					<div class="signup-container">
+						<h3 class="signup-h3">
+							Never miss our upcoming events:
+						</h3>
+						<div class="signup-email">
+							<h4 hidden="true" class="signup-h4" id="text-signup"></h4>
+							<form
+								id="form-signup"
+								action="https://ld41kdg243.execute-api.ap-southeast-2.amazonaws.com/default/adfp-signups"
+								method="post"
+								enctype="multipart/form-data">
+								<input
+									placeholder="email address for newsletter"
+									class="signup-email-address"
+									id="input-email"
+									type="email"
+									required />
+
+								<input id="form-submit" type="submit" class="button-subscribe">
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="blogs-and-events">
+				<ul class="blogs-and-events">
+					<ul class="blogs-and-events-columns">
+						<li class="blogs-and-events-blogs">
+							<h1>
+								<span class="blogs-and-events-3-dots">
+									<img src="/3-dots.svg" />
+								</span>
+								Blogs
+							</h1>
+							<h1 class="blogs-and-events-h1">
+								Blogpost #1
+							</h1>
+							<p>
+
+							</p>
+							<a href="#" class="button-with-arrow">
+								Read More
+							</a>
+						</li>
+						<li class="blogs-and-events-events">
+							<h1>
+								<span class="blogs-and-events-3-dots">
+									<img src="/3-dots.svg" />
+								</span>
+								Events
+							</h1>
+							<h1 class="blogs-and-events-h1">
+								Functional programming weekly
+							</h1>
+							<div class="blogs-and-events-meetup">
+								<a href="#">
+									<h3>
+										Thursday, 27th of September 2022
+									</h3>
+								</a>
+							</div>
+							<h3 class="blogs-and-events-meetup-date">
+								7.00 - 8.00 (ACST)
+							</h3>
+							<p>
+Come join us for our weekly coffee! New and experienced functional programmers welcome.
+							</p>
+							<a
+								href="https://www.meetup.com/en-AU/adelaide-functional-programming-meetup-group/events/dpdgxsydcmbkc/"
+								class="button-with-arrow"
+							>
+								Read More
+							</a>
+						</li>
+					</ul>
+				<ul>
+			</section>
+
+			<section id="about-our-club">
+				<ul class="about-our-club">
+					<li class="about-our-club-img-logo">
+						<img src="/logo-blue.svg" />
+					</li>
+					<li class="about-our-club-text">
+						<h2>
+							About our club
+						</h2>
+						<p>
+Adelaide Functional Programming is Adelaide's functional programming
+meetup celebrating all facets of functional programming. We welcome
+newbies and experienced developers to attend our social events, technical
+talks and Q&A roundtables.
+						</p>
+						<a
+							href="https://www.meetup.com/en-AU/Adelaide-Functional-Programming-Meetup-Group"
+							class="button-with-arrow"
+						>
+							Learn More
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<section id="footer">
+			<ul class="footer">
+				<div class="footer-img-logo-text-alt">
+					<img src="/logo-text-alt.svg" />
+				</div>
+				<ul class="footer-about-events-blogs">
+					<li>
+						<a href="#about-our-club">
+							About
+						</a>
+					</li>
+					<li>
+						<a href="https://www.meetup.com/en-AU/adelaide-functional-programming-meetup-group">
+							Events
+						</a>
+					</li>
+					<li>
+						<a href="https://medium.com/@alex_51007">
+							Blog
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/adelaide-fun-pro">
+							GitHub
+						</a>
+					</li>
+				</ul>
+				<ul class="footer-contact">
+					<li class="footer-img-logo-alt">
+						<img src="/logo-pink.svg" />
+					</li>
+					<li class="footer-contact-text">
+						<h3 class="footer-contact-h3">
+							Contact
+						</h3>
+						<a href="mailto:contact@adfp.au">
+							<h4 class="footer-contact-h4">
+								info@adfp.au
+							</h4>
+						</a>
+					</li>
+				</ul>
+			</ul>
+		</section>
+		<section id="superfooter">
+			<div class="superfooter">
+				<p>
+Designed by <a href="https://www.linkedin.com/in/paxiaizadira" target="_blank">Paxia Izadira</a> | ADFP | 2022
+				</p>
+			</div>
+		</section>
+	</body>
+	<script src="/index.js"></script>
+</html>
