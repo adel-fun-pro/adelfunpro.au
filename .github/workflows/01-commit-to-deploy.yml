@@ -48,7 +48,7 @@ jobs:
           git config --global user.email "action@github.com"
           git fetch
 
-          files="index.html index.css *.svg font"
+          files="$(ls -1 index.html index.css *.svg font)"
           dir="$(mktemp -d)"
           mv $files "$dir"
 

@@ -9,10 +9,19 @@ WORKDIR /usr/local/src/adelfunpro.au
 
 COPY . .
 
-RUN make
+RUN make build
 
 FROM nginx:stable-alpine
 
-COPY index.html *.css index.js *.svg /usr/share/nginx/html/
+COPY --from=build /usr/local/src/adelfunpro.au /tmp/adelfunpro
+
+WORKDIR /tmp/adelfunpro
+
+RUN ls
+
+RUN cp index.html index.css font.css index.js *.svg \
+	/usr/share/nginx/html/
+
+RUN rm -r /tmp/adelfunpro
 
 COPY font/ /usr/share/nginx/html/font/
