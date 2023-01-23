@@ -36,7 +36,10 @@ jobs:
         with:
           fetch-depth: 1
 
-      - run: git checkout HEAD
+      -
+        run: git checkout HEAD
+        with:
+          lfs: true
 
       -
         name: Build the sass dependencies
