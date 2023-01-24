@@ -28,8 +28,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
-        name: Use apt to get dependencies
-        run: sudo apt-get install -y make sass
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      -
+        run: npm i -g sass
 
       -
         uses: actions/checkout@v3
