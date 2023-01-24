@@ -24,7 +24,7 @@ jobs:
           push: true
           tags: afafk/adelfunpro.au:latest
 
-  build-and-push-to-deploy:
+  build-and-push-to-pages:
     runs-on: ubuntu-latest
     steps:
       -
@@ -42,25 +42,11 @@ jobs:
         run: make build
 
       -
-        name: Copy build files to another branch
-        run: |
-          git config --global user.name "Github Actions"
-          git config --global user.email "action@github.com"
-          git fetch
-
-          files="$(ls -1 index.html index.css *.svg)"
-          dir="$(mktemp -d)"
-          mv font "$dir"
-          mv $files "$dir"
-
-          git reset --hard HEAD
-
-          git checkout deploy
-
-          mv "$dir"/* .
-
-          git add -A
-          git diff-index --quiet HEAD ||  git commit -am "deploy files"
-          git push -f origin deploy
-
-          rmdir "$dir"
+        name: Update Cloudflare Pages deployment
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          directory: .
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
