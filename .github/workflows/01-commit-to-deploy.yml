@@ -50,7 +50,8 @@ jobs:
 
           files="$(ls -1 index.html index.css *.svg)"
           dir="$(mktemp -d)"
-          mv $files font "$dir"
+          mv font "$dir"
+          mv $files "$dir"
 
           git reset --hard HEAD
 
