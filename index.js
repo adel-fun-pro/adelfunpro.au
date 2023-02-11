@@ -18,10 +18,6 @@ const update_signup_box = (message) => {
 const send_email = (email) => {
 	const req = new XMLHttpRequest();
 
-	const form = new FormData();
-
-	form.append("email", email);
-
 	req.open("POST", URL_SIGNUP_LAMBDA);
 
 	req.addEventListener("error", (_) =>
@@ -32,7 +28,9 @@ const send_email = (email) => {
 		update_signup_box("registered " + email + "!")
 	});
 
-	req.send(form);
+	req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+	req.send("email=" + email);
 };
 
 document.addEventListener("DOMContentLoaded", (_) =>
