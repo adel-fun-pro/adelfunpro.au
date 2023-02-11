@@ -1,5 +1,5 @@
 "use strict";
-//
+
 const URL_SIGNUP_LAMBDA =
 	"https://ld41kdg243.execute-api.ap-southeast-2.amazonaws.com/default/adfp-signups";
 
